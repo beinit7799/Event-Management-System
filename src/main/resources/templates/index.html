@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="base::Layout(~{::section})">
+<head>
+    <meta charset="UTF-8">
+    <title>Event Arc</title>
+<!--    <link rel="stylesheet" th:href="@{css/index.css}">-->
+<!--    <link rel="stylesheet" th:href="@{css/nav.css}">-->
+</head>
+<body>
+
+<Section class="main-hero">
+    <div>
+        <div class="description-container">
+            <div class="hero">
+                <p class="description-heading">
+                    Design. Plan.<span> Execute.</span> Celebrate!
+                </p>
+                <p class="description-text">
+                    Empowering communities to take action on climate change through impactful events.We bring transparency and collaboration to organizing sustainable, eco-friendly initiatives. Together, let’s create events that inspire and drive meaningful change for our planet.
+                </p>
+            </div>
+            <div class="image">
+                <img th:src="@{images/climate.jpeg}" alt="image">
+            </div>
+        </div>
+        <h1 class="event">Events</h1>
+        
+        <div class="EMS_events">
+                <div class="EMS_event" th:each="event : ${events}">
+                    <p class="event_name" th:text="${event.getEventName()}"></p>
+                        <hr>
+                   <div class="event_section">
+                    <div >
+                        <p class="event_titles">Event Desctiption: <span th:text="${event.getDescription()}">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse pariatur delectus, sint commodi eius quas nostrum illo et itaque repellat quod est amet? Est nostrum animi tenetur quod doloribus iusto!</span></p>
+                        <p class="event_titles">Location: <span th:text="${event.getLocation()}"></span></p>
+                        <p class="event_titles">Date: <span th:text="${event.getDate()}"></span></p>
+                        <p class="event_titles">Event Creater: <span>Binit Kc</span></p>
+                        <form th:action="@{/express-interest}" method="post">
+                            <button type="submit">Enroll</button>
+                        </form>
+                    </div>
+                    <div class="event_image">
+                        <img th:src="@{images/cleanup.jpg}" alt="">
+                    </div>
+                   </div> 
+                </div>
+        </div>
+    </div>
+</Section>
+
+</body>
+</html>

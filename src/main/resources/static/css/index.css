@@ -1,0 +1,128 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.main-hero{
+   
+    margin:10px;
+    padding: 0 10px;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+}
+.main-hero > div{
+    max-width: 1200px;
+}
+.description-container{
+    display: grid;
+    row-gap: 4%;
+    grid-template-columns: 30% 70%;
+}
+
+
+.hero{
+    text-align: left;
+    padding: 2rem;
+   
+}
+.image{             
+    display: flex;          
+    justify-content: center;
+    /* align-items: center;     */
+    background-color: #faebd7;
+    flex-direction: row;
+    height: 60vh;
+    object-fit: cover;
+}
+
+.image img {
+    max-width: 100%;   
+    height: auto;           
+    border-radius: 5px;     
+}
+
+.description-heading{
+
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.description-heading span{
+    color: #5fdb7a;
+}
+.description__text{
+  text-align: left;
+}
+.event{
+    font-weight: bolder;
+    margin-left: 45px;
+    color: #5fdb7a;
+    text-align: center;
+    font-size: 35px;
+}
+.EMS_events{    
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    display: grid;
+    grid-template-columns: 80%;
+    justify-content: center;
+    display: grid;
+    row-gap: 4%;
+    column-gap: 4%;
+    grid-template-columns: 46% 46%;
+
+}
+.EMS_event{
+    box-shadow: 0px 0px 5px 0 #0000002c;
+    border-radius: 10px;
+    padding: 1rem;
+    /* margin-bottom: 2rem; */
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+.EMS_event:hover{
+    box-shadow: 0 4px 25px gray;
+    transform: translateY(-5px);
+}
+.event_name{
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin: 0px;
+}
+.event_section{
+    display: grid;
+    column-gap: 4%;
+    grid-template-columns: 48% 48%;
+    
+}
+.event_image img{
+    object-fit: contain;
+    width: 100%;
+}
+.event_titles{
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+.event_titles span{
+    font-weight: lighter;
+}
+
+/* Buttons */
+button {
+    background-color: #5fdb7a;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 10px !important;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+button:hover {
+    background-color: #4bbf63;
+    transform: scale(1.05);
+}
+
+
+

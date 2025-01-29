@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+   <link rel="stylesheet" th:href="@{css/signin.css}">
+   <link rel="stylesheet" th:href="@{css/base.css}">
+   <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+  <div class="container">
+    <div class="content">
+      <div class="image-container">
+        <img src="images/login2.jpg" alt="Person with laptop">
+      </div>
+      <div class="login-box">
+        <h2>Sign in</h2>
+        <form class="signin-form" th:action="@{/sign-in}" method="post">
+        
+            <div class="form-group">
+                <label for="name"></label>
+                <input type="text" name="username" id="name" placeholder="User Name">
+            </div>
+            <div class="form-group">
+                <label for="password"></label>
+                <input type="password" name="password" id="login_password" placeholder="Password">
+            	<div class="show-hide_buttons">
+                   <i class='bx bx-show' id="bx-show-login" onclick="hidePassword('login')"></i>
+                   <i class='bx bx-hide' id="bx-hide-login" onclick="showPassword('login')"></i>
+                </div>
+            </div>
+          
+            <div class="form-button">
+                <input type="submit" name="signup" id="signup" class="form-submit" value="Login">
+            </div>
+        </form>
+          <a th:href="@{/sign-up}" class="footer">Create an account</a>
+      </div>
+    </div>
+  </div>
+  <script th:src="@{js/signup.js}"></script>
+</body>
+</html>

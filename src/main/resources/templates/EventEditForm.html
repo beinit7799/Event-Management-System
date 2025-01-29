@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Event Edit</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+    /* General Styles */
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f9f9f9;
+    }
+
+    .container-fluid {
+        max-width: 800px;
+        margin: 30px auto;
+        background-color: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+    }
+
+    .card {
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+    .card-header {
+        padding: 15px;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .card-body {
+        padding: 20px;
+    }
+
+    .card-footer {
+        padding: 10px;
+        font-size: 14px;
+        background-color: #ffc107;
+        color: #ffffff;
+    }
+
+    /* Form Styles */
+    .row {
+        margin-bottom: 15px;
+        align-items: center;
+    }
+
+    .form-control {
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        padding: 8px 10px;
+        width: 100%;
+    }
+
+    .btn-success {
+        background-color: #28a745;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 4px;
+        transition: background-color 0.3s;
+    }
+
+    .btn-success:hover {
+        background-color: #218838;
+    }
+
+    .text-center {
+        text-align: center;
+    }
+
+    .text-white {
+        color: #fff;
+    }
+
+    .bg-primary {
+        background-color: #007bff;
+    }
+
+    .bg-warning {
+        background-color: #ffc107;
+    }
+</style>
+</head>
+<body>        
+        <div class="container-fluid">
+            
+            <div class="card">
+                
+                <div class="card-header bg-primary text-center text-white">
+                    <h5>Event Edit</h5>
+                </div>
+                    
+                    
+                <div class="card-body">
+                
+                <form action="/updateEvent" method="post" th:object="${eEdit}">
+                
+                            <div class="row p-2">
+                                <div class="col-4">Event Name</div>
+                                <div class="col-6">
+                                    <input type="text" th:field="*{eventName}" class="form-control">
+                                </div>
+                            </div>
+                            
+                            <div class="row p-2">
+                                <div class="col-4">Event Description</div>
+                                <div class="col-6">
+                                    <input type="text" th:field="*{description}" class="form-control">
+                                </div>
+                            </div>
+                            
+                            <div class="row p-2">
+                                <div class="col-4">Location</div>
+                                <div class="col-6">
+                                    <input type="text" th:field="*{location}" class="form-control">
+                                </div>
+                            </div>
+                            
+                            <div class="row p-2">
+                                <div class="col-4">Event Date</div>
+                                <div class="col-6">
+                                    <input type="text" th:field="*{date}" class="form-control">
+                                </div>
+                            </div>
+                            
+                            <div class="row p-2">
+                                <div class="col-4"></div>
+                                <div class="col-6">
+                                    <input type="submit" value="Update" class="btn btn-success">
+                                </div>
+                            </div>
+                    
+                        
+                        <input type="hidden" th:field="*{id}">
+                        
+                    </form>
+                
+                </div>
+                
+                <div class="card-footer bg-warning text-center">
+                    copyright@2024
+                </div>
+            
+            </div>
+        
+        </div>
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>User Profile</title>
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+<style>
+    /* Global Styles */
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f8f9fa;
+    }
+    .container-fluid {
+        max-width: 600px;
+        margin: 30px auto;
+        padding: 15px;
+    }
+    .card {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        overflow: hidden;
+        background-color: #ffffff;
+    }
+    .card-header {
+        padding: 15px;
+        background-color: #007bff;
+        color: white;
+        text-align: center;
+    }
+    .card-header h5 {
+        margin: 0;
+        font-size: 1.5rem;
+    }
+    .card-body {
+        padding: 20px;
+    }
+    .row {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+    .col-4 {
+        flex: 0 0 40%;
+        font-weight: bold;
+        color: #343a40;
+    }
+    .col-6 {
+        flex: 0 0 60%;
+        color: #495057;
+    }
+    .card-footer {
+        padding: 10px;
+        background-color: #ffc107;
+        text-align: center;
+        font-size: 0.9rem;
+        font-weight: bold;
+    }
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .container-fluid {
+            padding: 10px;
+        }
+        .card-header h5 {
+            font-size: 1.2rem;
+        }  
+    }
+    .navbar {
+    	margin-top:0px;
+        margin-bottom: 100px;
+        padding:0px;
+    }
+    .navbar-nav .nav-item .nav-link {
+        color: white;
+    }
+    .navbar-nav .nav-item .nav-link:hover {
+        color: #f8c50c;
+    }
+    .container-fluid {
+    max-width: 583px;
+    margin: -3px auto;
+    padding: 15px;
+	}
+</style>
+</head>
+<body>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Event Arc</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/api/events/event">Event</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- User Profile -->
+<div class="container-fluid">
+    <div class="card">
+        <div class="card-header bg-primary text-center text-white">
+            <h5>User Profile</h5>
+        </div>
+        <div class="card-body">
+            <div class="row p-2">
+                <div class="col-4">User Name</div>
+                <div class="col-6">
+                    [[${userName}]]
+                </div>
+            </div>
+            <div class="row p-2">
+                <div class="col-4">Email</div>
+                <div class="col-6">
+                    [[${email}]]
+                </div>
+            </div>
+        </div>
+        <div class="card-footer bg-warning text-center">
+            copyright@2024
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!-- <html lang="en" xmlns:th="http://www.thymeleaf.org"> -->
+<head>
+    <meta charset="UTF-8">
+    <title>Navigation Bar</title>
+     <link rel="stylesheet" th:href="@{css/nav.css}">
+<!--     <link rel="stylesheet" href="../static/css/nav.css">-->
+</head>
+<body> 
+    <div> 
+        <div class="nav-container">
+            <nav class="EMS-navbar">
+                <div class="EMS-container">
+                    <div class="logo">
+                        <a href="#"><img th:src="@{images/logo (2).png}" alt="logo"></a>
+                     </div>
+                    <ul class="nav-links">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/event">Event</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                        <form th:action="@{/logout}" method="post">
+                        	<button type="submit">Logout</button>
+                        </form>
+                    </ul>
+                </div>
+            
+        </nav>
+        </div>
+    </div>
+</body>
+</html>

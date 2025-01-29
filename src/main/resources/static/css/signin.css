@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    margin-left: 5px;
+  }
+  
+  body {
+    font-family: var(--body-font);
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 800px;
+    background: #fff;
+    padding: 70px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 20px;
+  }
+  
+  .image-container img {
+    width: 150%;
+    /* max-width: 300px; */
+    border-radius: 10px;
+  }
+  
+  .login-box {
+    flex: 1;
+  }
+  
+  h2 {
+    margin-bottom: 50px;
+    text-align: center;
+    font-size: 2rem;
+  }
+  
+  .input-group {
+    margin-bottom: 15px;
+    text-align: left;
+  }
+  
+  label {
+    font-size: 14px;
+    color: #333;
+  }
+  
+  input[type="text"],
+  input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 0px;
+  }
+    
+  .form-group {
+    position: relative;
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: #999;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 10px 15px;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .form-group input:focus {
+    border-color: #0066cc;
+    outline: none;
+  }
+  
+  .form-group input[type="checkbox"] {
+    width: auto;
+    margin-right: 5px;
+  }
+  .form-submit {
+    background-color: #5397db;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s ease;
+  }
+  
+  .form-submit:hover {
+    background-color: #005bb5;
+  }
+
+  .footer {
+    display: block;
+    margin-top: 15px;
+    margin-left: 12px;
+    font-size: 16px;
+    color: #0066cc;
+    text-decoration: none;
+  }
+  
+  .footer:hover{
+    text-decoration: underline;
+  }
+  .bx-hide{
+    cursor: pointer;
+	}
+	#bx-show-login{
+	    display: none ;
+	    cursor:pointer;
+	}
+	
+.show-hide_buttons{
+    position: absolute;
+    right: 0rem;
+    top: 0.9rem;
+  }
